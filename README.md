@@ -1,12 +1,17 @@
-# React + Vite
+# Bitonic Sort Parallel Performance Analysis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project visualizes the performance of a parallel Bitonic Sort algorithm using a heatmap in my course work. It compares different combinations of recursion thresholds and depths to identify optimal parallelization parameters.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive heatmap visualization of sorting performance
+- Comparison of execution time vs speedup for different array sizes (100 to 10M elements)
+- Analysis of two key parameters:
+  - **Threshold**: minimum subarray size for parallel execution
+  - **Depth**: recursion level limit before switching to sequential mode
 
-## Expanding the ESLint configuration
+## Results
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The visualization helps identify the optimal threshold/depth combinations that maximize speedup while minimizing execution time for parallel Bitonic Sort.
+
+**[Link on website](https://bitonic-sort-heatmap.netlify.app/)**
